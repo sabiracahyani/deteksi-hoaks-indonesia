@@ -14,7 +14,7 @@ download_nltk_data()
 
 @st.cache_resource
 def load_model():
-    file_path = 'model_hoaks.pkl'
+    file_path = 'model_hoaks_with_thresh.pkl'
     if not os.path.exists(file_path):
         gdown.download(
             'https://drive.google.com/uc?id=19hmOr6EigRyYck7kseNNO1Gi5bDxktic',
