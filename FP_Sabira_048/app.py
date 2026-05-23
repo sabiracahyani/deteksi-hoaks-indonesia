@@ -78,7 +78,7 @@ if st.button("🔎 Cek Berita", use_container_width=True, type="primary"):
         prob         = model.predict_proba(teks_vektor)[0]
         prob_hoaks   = prob[1]
         prob_valid   = prob[0]
-        prediksi     = 1 if prob_hoaks >= THRESHOLD else 0
+        prediksi     = 1 if prob_hoaks > prob_valid else 0
 
         st.divider()
 
